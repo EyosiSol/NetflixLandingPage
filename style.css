@@ -1,0 +1,118 @@
+*{
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+}
+.upper{
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/1fd8c6d0-20db-4667-860e-dd1ad7353ac0/e31df4b9-c4ce-41c6-8cde-7d3a2e96a8c1/ET-en-20240624-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background: cover no-repeat center;
+    height: 78vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr;}
+.upper::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+
+}
+.header{
+    position: relative;
+    z-index: 2; /* Ensure content is above the shadow overlay */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 2vh 18vw;
+}
+.logo img{
+    width: 150px;
+    height: 40px;
+}
+.signin button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;     
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.signin button:hover{
+    background-color: rgb(204, 5, 5);
+    color:white
+}
+.land{
+    margin-top: 2vh;
+    position: relative;
+    z-index: 2; /* Ensure content is above the shadow overlay */
+    color:white;
+    display: grid;
+    justify-content: center;
+    width: auto;
+}
+.land-content{
+    border: 1px solid white;
+    margin-top: 40px;
+    text-align: center;
+}
+.land-content h1{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.land-content>h3{
+    border: 1px solid white;
+    margin-bottom: 20px;
+    font-weight: 100;
+}   
+.email{
+    position: relative;
+    border: 1px solid white;
+    align-content: start;
+    line-height: 80px;
+}
+.email>input{
+    position: relative;
+    outline: none;
+    border: none;
+    width: 400px;
+    height: 50px;
+    margin-left: -1.5vw;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 1.2em ;
+    padding-left: 1.5vw;
+    border-radius: 3px;
+    transform: 0.1s ease;
+    z-index: 1111;
+}
+.labeline{
+    position: absolute;
+    font-size: 1.2em;
+    color: white;
+    padding: 0 0.5vw;
+    margin: -9vh 9vw;
+    background-color: transparent;
+}
+.email>input:focus + .labeline, 
+.email>input:valid + .labeline{
+    color: white;
+    margin-top: -8.4vh;
+    font-size: 0.8em;
+    /* border: 1px solid green; */
+    height: 50px;
+    line-height: 30px;
+    transform: translate(-5px,6px);
+    z-index: 1111;
+}
+.email > input:focus{
+    font-size: 0.8em;
+    align-content: end;
+}
